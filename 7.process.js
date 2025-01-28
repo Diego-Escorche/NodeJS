@@ -14,5 +14,5 @@ process.exit(0) // Sale del proceso actual sin ningun error. 1 = Error, 0 = Corr
 
 // Controlar eventos del proceso
 process.on('exit', () => {
-    // Limpiar los recursos
+  // Limpiar los recursos
 })

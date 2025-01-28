@@ -2,7 +2,7 @@
 const path = require('node:path')
 
 // unix -> /
-// windows (El caso de mi OS)-> \ 
+// windows (El caso de mi OS)-> \
 
 // unir rutas con path.join
 const filePath = path.join('content', 'subfolder', 'test.txt') // El OS no permite crear las rutas en un string, toca unirlas.
