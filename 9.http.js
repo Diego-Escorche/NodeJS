@@ -1,10 +1,15 @@
 const http = require('node:http');
+const { findAvailablePort } = require('./10.free-port.js');
+
+const desiredPort = process.env.PORT ?? 3000;
 
 const server = http.createServer((req, res) => {
   console.log('Request received');
   res.end('Hello World');
 });
 
-server.listen(3000, () => {
-  console.log('Server started on http://localhost:3000');
+findAvailablePort(desiredPort).then((port) => {
+  server.listen(port, () => {
+    console.log('Server listening on port', port);
+  });
 });
