@@ -1,0 +1,14 @@
+### Recuperar informacion de charizard
+GET http://localhost:1234/pokemon/charizard
+
+### Es necesario separar las request.
+
+### Crear un pokemon
+POST http://localhost:1234/pokemon 
+Content-Type: application/json
+
+{
+    "name": "charizard",
+    "type": "fire",
+    "level": 36
+}
