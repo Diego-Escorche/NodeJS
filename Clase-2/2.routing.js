@@ -19,6 +19,7 @@ const processRequest = (req, res) => {
         case '/pokemon':
           let body = '';
 
+          // we need to listen to the data event to get the body of the request
           req.on('data', (chunk) => {
             body += chunk.toString(); // convert Buffer to string
           });
